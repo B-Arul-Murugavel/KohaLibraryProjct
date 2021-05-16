@@ -35,3 +35,22 @@ nav .btn{
     width: 200px;
     font-size: 1.1rem;
 }
+/**************Side Navbar**************/
+.side-nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgb(4, 15, 53);
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 20rem;
+    justify-content: space-evenly;
+    z-index: -1;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.side-nav button{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
