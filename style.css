@@ -53,13 +53,15 @@ header{
     background-color: #1b2840;
     
 }
-
 .side-nav-button{
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+.side-nav-button:nth-child(1){
+    margin-top: 0;
 }
 .caution{
     position: fixed;
