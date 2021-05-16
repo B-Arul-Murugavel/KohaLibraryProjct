@@ -2,4 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
+
+header{
+    height: 100px;
+    padding: 1rem 2rem;
+    background-color: rgb(4, 15, 53);
+    color: #FFF;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    width: 70px;
+    height: 70px;
+    margin-right: 2rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+nav .btn{
+    height: 50px;
+    width: 200px;
+    font-size: 1.1rem;
+}
