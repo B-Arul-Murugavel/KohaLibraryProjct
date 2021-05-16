@@ -54,3 +54,25 @@ nav .btn{
     padding: 1rem;
     font-size: 1.5rem;
 }
+.caution{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(4, 15, 53);
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+@media (max-width:1000px){
+    .caution{
+        display: flex;
+    }
+    .main-container{
+        display: none;
+    }
+}
