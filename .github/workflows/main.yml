@@ -31,4 +31,4 @@ jobs:
           echo "seems that changed other than readme.md file"
           exit 1
       - name: Success
-        run: echo "done"
+        run: echo "File change Initiated"
