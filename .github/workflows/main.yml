@@ -26,7 +26,7 @@ jobs:
           paths: ^README.md
 
       - name: Echo Match
-        if: steps.changed.outputs.matched == 'false'
+        if: steps.changed.outputs.matched != 'true'
         run: |
           echo "seems that changed other than readme.md file"
           exit 1
