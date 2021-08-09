@@ -27,5 +27,4 @@ jobs:
 
       - name: Echo Match
         if: steps.changed.outputs.matched == 'true'
-        run: echo Matched
-        else: echo 'Not Matched'
+        run: bash {0}
