@@ -20,7 +20,7 @@ jobs:
         uses: trilom/file-changes-action@v1.2.3
       - name: test
         run: |
-          cat KohaLibraryProjct/README.md
+          cat BLooDBRothER/KohaLibraryProjct/README.md
           echo '${{ steps.file_changes.outputs.files}}'
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
