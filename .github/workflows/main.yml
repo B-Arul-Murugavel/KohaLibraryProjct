@@ -24,6 +24,10 @@ jobs:
         uses: foodee/pr-includes-file-change@master
         with:
           paths: ^README.md
+          
+      - name: path
+        run: |
+          echo "${ $GITHUB_EVENT_PATH }"
 
       - name: File Match
         if: steps.changed.outputs.matched != 'true'
