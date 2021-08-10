@@ -1,7 +1,7 @@
 name: linter test
 on:
   pull_request:
-    branches: [main]
+  workflow_dispatch:
 jobs:
 
   test:
@@ -9,8 +9,14 @@ jobs:
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
-      - name: Super-Linter
-        uses: github/super-linter@v4.6.1
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+        
+      - name: Lint Code Base
+        uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
