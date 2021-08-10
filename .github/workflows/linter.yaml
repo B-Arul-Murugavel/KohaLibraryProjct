@@ -1,46 +1,18 @@
-name: Lint Test
-
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
-
-#############################
-# Start the job on all push #
-#############################
+name: linter test
 on:
   pull_request:
-    branches: [master]
-
-###############
-# Set the Job #
-###############
+    branches: [ main ]
+  workflow_dispatch:
 jobs:
-  build:
-    # Name the Job
-    name: Lint Code Base
-    # Set the agent to run on
+
+  test:
     runs-on: ubuntu-latest
-
-    ##################
-    # Load all steps #
-    ##################
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
-
-      ################################
-      # Run Linter against code base #
-      ################################
-      - name: Lint Code Base
-        uses: github/super-linter@v4
+      - name: Super-Linter
+        uses: github/super-linter@v4.6.1
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH: mastere
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
